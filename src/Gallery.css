@@ -1,0 +1,14 @@
+.fixed-image {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px; /* Adjust size as needed */
+  z-index: 999; /* Make sure it's on top */
+  opacity: 0.8;  /* Optional: semi-transparent */
+  pointer-events: none; /* Prevent blocking clicks below */
+}
+
+.fixed-image img {
+  width: 100%;
+  height: auto;
+}

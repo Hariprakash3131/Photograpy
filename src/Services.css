@@ -1,0 +1,140 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Services Section */
+.services {
+  text-align: center;
+  padding: 60px 20px 30px;
+  background: #fdfdfd;
+}
+
+.services-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 700;
+}
+
+.services-text p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 1em auto 5em;
+  max-width: 800px;
+}
+
+/* Price Styling - Simple Yellow */
+.amount {
+  font-size: x-large;
+  font-weight: 800;
+  color: #FFD700; /* bright yellow (golden) */
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/* Card Styling */
+.card {
+  margin: 20px;
+  border: 2px solid #eee;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Flex layout to push button to bottom */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-group {
+  
+  margin-top: -90px !important;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Card body spacing and layout */
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  text-align: center;
+}
+
+/* Card title */
+.card-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #1a1a1a;
+}
+
+/* List Styling with Checkmarks */
+.services-text ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+  flex-grow: 1;
+}
+
+.services-text li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.services-text li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #28a745; /* green checkmark */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Book Now Button */
+.book-button {
+  border-bottom: 3px solid #FFD700; /* yellow bottom border */
+  border-radius: 54px;
+
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+/* Hover effect */
+.book-button:hover {
+  border-bottom: 3px solid #e6b800;
+  transform: translateY(-2px);
+}
+.fixed-image {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px; /* Adjust size as needed */
+  z-index: 999; /* Make sure it's on top */
+  opacity: 0.8;  /* Optional: semi-transparent */
+  pointer-events: none; /* Prevent blocking clicks below */
+}
+
+.fixed-image img {
+  width: 100%;
+  height: auto;
+}
