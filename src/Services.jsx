@@ -2,6 +2,7 @@ import './Services.css'
 import './assets/Moveable.jpeg'
 function Services(){
     return(
+      <>
         <div>
         <div className="services">
             <div className="services-text " >
@@ -71,6 +72,8 @@ function Services(){
 
 
 </div>
+
+</>
         
     )
 }

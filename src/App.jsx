@@ -6,6 +6,7 @@ import Banner from './Banner'
 import Services from './Services'
 import Gallery from './Gallery'
 
+
 function App() {
  
   return (
@@ -15,6 +16,7 @@ function App() {
     <Portfolio/>
     <Services/>
     <Gallery/>
+  
    </>
   )
 }
