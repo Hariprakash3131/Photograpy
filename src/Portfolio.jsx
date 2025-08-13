@@ -9,7 +9,7 @@ export default function Portfolio() {
     
     useEffect(() => {
         console.log('useEffect called');
-        fetch('http://localhost:5000/categories')
+        fetch('https://photograpy.onrender.com/categories')
         .then(response => {
             console.log(response);
             return response.json();
