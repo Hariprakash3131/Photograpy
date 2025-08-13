@@ -1,0 +1,242 @@
+/* 🌙 Footer Base Styles */
+.footer {
+  background-color: #0f1324;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🖼 Layout Container */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 🔖 Logo Section */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.footer-logo h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* 📝 About Section */
+.footer-about p {
+  color: #bbb;
+  margin: 12px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 🌐 Social Icons */
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons i {
+  font-size: 18px;
+  color: #bbb;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: #f0cbcb;
+  transform: scale(1.1);
+}
+
+/* 📚 Footer Columns */
+.footer-col h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col li {
+  color: #bbb;
+  font-size: 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-col li:hover {
+  color: #fff;
+}
+
+/* 📩 Newsletter */
+.footer-newsletter p {
+  color: #bbb;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.newsletter-form {
+  display: flex;
+  background-color: #1d2235;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.newsletter-form button {
+  background-color: #2563eb;
+  border: none;
+  padding: 0 14px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #1e4fc3;
+}
+
+/* 📌 Footer Bottom */
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #bbb;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links span {
+  font-size: 13px;
+  color: #bbb;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-links span:hover {
+  color: #fff;
+}
+
+/* 📱 Tablet & Mobile Responsive */
+@media (max-width: 768px) {
+  /* ✅ Make Logo + Quick Links + Services same row */
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-about {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  /* Newsletter smaller & centered */
+  .footer-newsletter {
+    grid-column: span 3;
+  }
+
+  .newsletter-form {
+    flex-direction: row;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .newsletter-form button {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
+
+/* 📱 Small Mobile */
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-logo h3 {
+    font-size: 18px;
+  }
+
+  .footer-col h4 {
+    font-size: 15px;
+  }
+
+  .footer-col li,
+  .footer-about p,
+  .footer-newsletter p {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
