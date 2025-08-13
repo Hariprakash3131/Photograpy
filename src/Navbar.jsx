@@ -33,9 +33,7 @@ function Navbar() {
                     </ul>
                 </div>
 
-                <div className='nav-button'>
-                    <button className='nav-booknow'>Book Now</button>
-                </div>
+               
             </nav>
         </div>
     );
