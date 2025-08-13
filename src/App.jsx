@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 import Banner from './Banner'
 import Services from './Services'
 import Gallery from './Gallery'
-
+import Footer from './Footer'
 
 function App() {
  
@@ -16,6 +16,7 @@ function App() {
     <Portfolio/>
     <Services/>
     <Gallery/>
+    <Footer/>
   
    </>
   )
