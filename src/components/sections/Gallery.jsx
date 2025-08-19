@@ -20,70 +20,73 @@ function Gallery() {
 
   return (
     <>
-    <div className='services'>
-      <div className='services-text'>
-        <h1>Gallery/Portfolio</h1>
-        <p>We pride ourselves on simple work ethics – creativity and client satisfaction. We respect the client's need to create wonderful memories, and we commit ourselves to create them with our cameras. Here are a few stills from our archives!</p>
-      </div>
-      
-      <div className='gallery-container'>
-        {/* First Row - 3 columns */}
-        <div className='gallery-row'>
-          {images.slice(0, 3).map((img, index) => (
-            <div className='gallery-card' key={`img-${index}`}>
-              <img 
-                src={img} 
-                alt={`Gallery ${index + 1}`} 
-                loading="lazy"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                }}
-              />
-            </div>
-          ))}
+      <div className='services'>
+        <div className='services-text'>
+          <h1>Gallery/Portfolio</h1>
+          <p>
+            We pride ourselves on simple work ethics – creativity and client satisfaction. 
+            We respect the client's need to create wonderful memories, and we commit ourselves 
+            to create them with our cameras. Here are a few stills from our archives!
+          </p>
         </div>
         
-        {/* Second Row - 2 columns */}
-        <div className='gallery-row'>
-          {images.slice(3, 5).map((img, index) => (
-            <div className='gallery-card wide' key={`img-${index + 3}`}>
-              <img 
-                src={img} 
-                alt={`Gallery ${index + 4}`} 
-                loading="lazy"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                }}
-              />
-            </div>
-          ))}
-        </div>
-        
-        {/* Third Row - 3 columns */}
-        <div className='gallery-row'>
-          {images.slice(5).map((img, index) => (
-            <div className='gallery-card' key={`img-${index + 5}`}>
-              <img 
-                src={img} 
-                alt={`Gallery ${index + 6}`} 
-                loading="lazy"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                }}
-              />
-            </div>
-          ))}
+        <div className='gallery-container'>
+          {/* First Row - 3 columns */}
+          <div className='gallery-row row-3'>
+            {images.slice(0, 3).map((img, index) => (
+              <div className='gallery-card' key={`img-${index}`}>
+                <img 
+                  src={img} 
+                  alt={`Gallery ${index + 1}`} 
+                  loading="lazy"
+                  onError={(e) => e.target.style.display = 'none'}
+                />
+              </div>
+            ))}
+          </div>
+          
+          {/* Second Row - 2 columns */}
+          <div className='gallery-row row-2'>
+            {images.slice(3, 5).map((img, index) => (
+              <div className='gallery-card wide' key={`img-${index + 3}`}>
+                <img 
+                  src={img} 
+                  alt={`Gallery ${index + 4}`} 
+                  loading="lazy"
+                  onError={(e) => e.target.style.display = 'none'}
+                />
+              </div>
+            ))}
+          </div>
+          
+          {/* Third Row - 3 columns */}
+          <div className='gallery-row row-3'>
+            {images.slice(5).map((img, index) => (
+              <div className='gallery-card' key={`img-${index + 5}`}>
+                <img 
+                  src={img} 
+                  alt={`Gallery ${index + 6}`} 
+                  loading="lazy"
+                  onError={(e) => e.target.style.display = 'none'}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
 
-
-    <div>
+      <div>
         <div className='mission-section'>
-            
+          <div className='mission-content'>
+            <h2>Our Mission</h2>
+            <p>
+              Capturing timeless memories with creativity and passion, 
+              ensuring every client feels their story is beautifully told 
+              through our lenses.
+            </p>
+          </div>
         </div>
-    </div>
-    
+      </div>
     </>
   );
 }
