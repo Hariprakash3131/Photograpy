@@ -1,5 +1,5 @@
-import './Portfolio.css'
-import EventCart from './EventCart';
+import '../../styles/Portfolio.css'
+import EventCart from '../shared/EventCart';
 import { useState, useEffect } from 'react';
 
 export default function Portfolio() {

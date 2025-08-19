@@ -61,11 +61,10 @@ nav {
 .nav-b {
   font-size: 32px;
   font-weight: 800;
-  background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #1a1a1a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-primary);
   font-family: 'Poppins', sans-serif;
   letter-spacing: -1px;
+  font-style: italic;
 }
 
 .nav-b i {
@@ -92,7 +91,9 @@ nav {
   display: flex;
   list-style: none;
   gap: 40px;
-  align-items: center;
+ 
+  position:relative;
+  left:200px;
   margin: 0;
   padding: 0;
 }
@@ -102,7 +103,7 @@ nav {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 16px;
-  color: #1a1a1a;
+  color: var(--text-primary);
   cursor: pointer;
   padding: 12px 0;
   transition: 0.3s;
@@ -188,6 +189,7 @@ nav {
 .navbar-toggler {
   border: none;
   background-color: transparent;
+  display: none;
 }
 
 .navbar-toggler-icon {
@@ -198,10 +200,27 @@ nav {
 
 /* Responsive Media Queries */
 @media (max-width: 992px) {
+  .navbar-toggler { display: block; }
+
+  .nav-menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 0.25s ease;
+  }
+
+  .nav-menu.open { transform: scaleY(1); }
+
   .nav-links {
     flex-direction: column;
-    gap: 15px;
-    padding: 20px 0;
+    gap: 12px;
+    padding: 16px 0 20px;
   }
 
   .nav-booknow {

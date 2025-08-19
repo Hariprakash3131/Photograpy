@@ -1,5 +1,5 @@
-import './Services.css'
-import './assets/Moveable.jpeg'
+import '../../styles/Services.css'
+import '../../assets/Moveable.jpeg'
 function Services(){
     return(
       <>

@@ -1,0 +1,42 @@
+/* Global base styles */
+:root {
+  --cream-50: #fffbf2;
+  --cream-100: #fff7e6;
+  --text-primary: #3a2e1a;
+  --text-secondary: #5a4a32;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--cream-50);
+  color: var(--text-primary);
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-style: inherit;
+}
+
+p, li, span, a, small {
+  color: var(--text-secondary);
+  font-style: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Make section backgrounds transparent by default so the cream shows through */
+.services {
+  background: transparent !important;
+}
+

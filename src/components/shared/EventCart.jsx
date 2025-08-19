@@ -1,4 +1,4 @@
-import './EventCart.css';
+import '../../styles/EventCart.css';
 
 function EventCart(props) {
   return (

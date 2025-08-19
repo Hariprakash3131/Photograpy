@@ -1,9 +1,10 @@
 /* 🌙 Footer Base Styles */
 .footer {
-  background-color: #0f1324;
-  color: #fff;
+  background-color: transparent;
+  color: var(--text-primary);
   padding: 50px 20px 20px;
   font-family: 'Poppins', sans-serif;
+  font-style: italic;
 }
 
 /* 🖼 Layout Container */
@@ -35,7 +36,7 @@
 
 /* 📝 About Section */
 .footer-about p {
-  color: #bbb;
+  color: var(--text-secondary);
   margin: 12px 0;
   font-size: 14px;
   line-height: 1.6;
@@ -49,7 +50,7 @@
 
 .social-icons i {
   font-size: 18px;
-  color: #bbb;
+  color: var(--text-secondary);
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -72,7 +73,7 @@
 }
 
 .footer-col li {
-  color: #bbb;
+  color: var(--text-secondary);
   font-size: 14px;
   margin-bottom: 8px;
   cursor: pointer;
@@ -80,12 +81,12 @@
 }
 
 .footer-col li:hover {
-  color: #fff;
+  color: #301717;
 }
 
 /* 📩 Newsletter */
 .footer-newsletter p {
-  color: #bbb;
+  color: var(--text-secondary);
   font-size: 14px;
   margin-bottom: 12px;
 }
@@ -103,8 +104,9 @@
   background: transparent;
   border: none;
   outline: none;
-  color: #fff;
+  color: var(--text-primary);
   font-size: 14px;
+  color: #fff;
 }
 
 .newsletter-form button {
@@ -118,14 +120,14 @@
 }
 
 .newsletter-form button:hover {
-  background-color: #1e4fc3;
+  background-color: #0c204e;
 }
 
 /* 📌 Footer Bottom */
 .footer-bottom {
   margin-top: 30px;
   padding-top: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -137,7 +139,7 @@
 
 .footer-bottom p {
   font-size: 13px;
-  color: #bbb;
+  color: var(--text-secondary);
 }
 
 .footer-links {
@@ -147,26 +149,26 @@
 
 .footer-links span {
   font-size: 13px;
-  color: #bbb;
+  color: var(--text-secondary);
   cursor: pointer;
   transition: color 0.3s;
 }
 
 .footer-links span:hover {
-  color: #fff;
+  color: #1b1616;
 }
 
 /* 📱 Tablet & Mobile Responsive */
 @media (max-width: 768px) {
   /* ✅ Make Logo + Quick Links + Services same row */
   .footer-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     text-align: center;
   }
 
   .footer-about {
-    grid-column: span 3;
+    grid-column: span 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,12 +184,13 @@
 
   /* Newsletter smaller & centered */
   .footer-newsletter {
-    grid-column: span 3;
+    grid-column: span 2;
   }
 
   .newsletter-form {
     flex-direction: row;
-    max-width: 250px;
+    width: 100%;
+    max-width: 360px;
     margin: 0 auto;
   }
 
@@ -239,4 +242,17 @@
     justify-content: center;
     gap: 10px;
   }
+
+  .newsletter-form {
+    max-width: 100%;
+  }
+}
+
+/* 📱 Landscape tablets (<=1024px) - 2 columns for more balance */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .footer-newsletter { grid-column: span 2; }
 }
