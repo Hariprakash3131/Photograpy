@@ -1,6 +1,7 @@
 import '../../styles/Navbar.css'
 import logoImage from '../../assets/logo.png'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
@@ -11,8 +12,10 @@ function Navbar() {
         <div className="navbar-wrapper"> {/* Renamed to avoid conflict */}
             <nav className="navbar navbar-expand-lg">
                 <span className='nav-logo'>
-                    <img src={logoImage} alt="Fotokaran Logo"/>
-                    <b className='nav-b'>Fotokaran</b>
+                    <Link to="/">
+                        <img src={logoImage} alt="Fotokaran Logo"/>
+                        <b className='nav-b'>Fotokaran</b>
+                    </Link>
                 </span>
 
                 {/* Hamburger Button */}
@@ -30,11 +33,11 @@ function Navbar() {
                 {/* Collapsible Menu */}
                 <div className={`nav-menu ${isOpen ? 'open' : ''}`} id="navbarNav">
                     <ul className="nav-links navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li className="nav-item"><a className="nav-link" href="#" onClick={closeMenu}>Home</a></li>
-                        <li className="nav-item"><a className="nav-link" href="https://astonishing-souffle-3e73d8.netlify.app/" onClick={closeMenu}>Portfolio</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#" onClick={closeMenu}>Services</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#" onClick={closeMenu}>Booking</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#" onClick={closeMenu}>Contact</a></li>
+                        <li className="nav-item"><Link className="nav-link" to="/" onClick={closeMenu}>Home</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/portfolio" onClick={closeMenu}>Portfolio</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/services" onClick={closeMenu}>Services</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/gallery" onClick={closeMenu}>Gallery</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/contact" onClick={closeMenu}>Contact</Link></li>
                     </ul>
                 </div>
 
